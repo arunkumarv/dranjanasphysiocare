@@ -69,6 +69,18 @@
                 /* Set title font size for desktop */
             }
         }
+
+        /* Adjustments for smaller screens (mobile horizontal view) */
+        @media screen and (max-width: 768px) {
+            .main-content-section .column {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            .content-box {
+                padding: 0 !important; /* Remove padding from content-box on mobile */
+                width: 100% !important; /* Ensure full width */
+            }
+        }
     </style>
 </head>
 
@@ -103,7 +115,7 @@
         <section class="section main-content-section">
             <div class="columns is-desktop">
 
-                <div class="column is-half">
+                <div class="column">
                     <div class="content-box">
                         <div>
                             <span class="tag is-success is-medium is-rounded is-light">
@@ -125,7 +137,7 @@
                     </div>
                 </div>
 
-                <div class="column is-half">
+                <div class="column">
                     <figure class="image">
                         <img class="styled-image"
                             src="https://media.istockphoto.com/id/171296819/photo/african-american-female-doctor-holding-a-clipboard-isolated.jpg?s=612x612&w=0&k=20&c=hCJk-9gsOff8Fac04a11VMOwflMYiRXUVfAj3UTn67U="
