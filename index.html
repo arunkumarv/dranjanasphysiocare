@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Anjana's Physio Clinic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: rgb(231, 246, 252);
+            /* Set background color */
+        }
+
+        /* Custom class to force 1024px maximum width on the navbar container */
+        .is-max-1024 {
+            max-width: 1024px !important;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Style for the navbar shadow */
+        .navbar {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Style for the main content area */
+        .main-content-section {
+            padding-top: 2rem;
+            /* Add some space above the content */
+            padding-bottom: 2rem;
+            padding-left: 0;
+            /* Remove left padding */
+            padding-right: 0;
+            /* Remove right padding */
+            min-height: 80vh;
+            /* Ensure the content section is visible */
+        }
+
+        .content-box {
+            padding: 20px;
+            border: none;
+            /* Remove border */
+            border-radius: 6px;
+            background-color: rgb(231, 246, 252);
+            /* Set background color */
+            height: 100%;
+            /* Make sure boxes are equal height within the column */
+        }
+
+        .styled-image {
+            border-radius: 20px;
+            /* More curved border */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            /* Shadow */
+            width: 100%;
+            /* Ensure it takes full width of its container */
+            height: auto;
+            /* Maintain aspect ratio */
+            display: block;
+            /* Remove extra space below image */
+        }
+
+        /* Desktop specific styles */
+        @media screen and (min-width: 1024px) {
+            .content-box .title {
+                font-size: 3.25rem !important;
+                /* Set title font size for desktop */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+        <div class="container is-max-1024">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="#">
+                    <span class="has-text-weight-bold is-size-5">Dr Anjana's Physio Clinic</span>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="#">Home</a>
+                    <a class="navbar-item" href="#">About</a>
+                    <a class="navbar-item" href="#">Services</a>
+                    <a class="navbar-item" href="#">Blog</a>
+                    <a class="navbar-item" href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container is-max-1024">
+        <section class="section main-content-section">
+            <div class="columns is-desktop">
+
+                <div class="column is-half">
+                    <div class="content-box">
+                        <div>
+                            <span class="tag is-success is-medium is-rounded is-light">
+                                Certified Physiotherapist
+                            </span>
+                        </div>
+                        
+                        <h3 class="title is-5 has-text-info">Dr. Anjana S. Raj</h3>
+                        <p>This space is ideal for a detailed biography, a welcome message, or a high-impact call to
+                            action.</p>
+                        <p>On larger screens (desktop/laptop), this column sits directly next to Column Two, taking up
+                            50% of the available width.</p>
+                        <p>On smaller screens (mobile/tablet), Bulma automatically makes this column full width (100%),
+                            pushing Column Two below it.</p>
+                        <div class="tags are-medium mt-4">
+                            <span class="tag is-primary">Physiotherapy</span>
+                            <span class="tag is-primary is-light">Credentials</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column is-half">
+                    <figure class="image">
+                        <img class="styled-image"
+                            src="https://media.istockphoto.com/id/171296819/photo/african-american-female-doctor-holding-a-clipboard-isolated.jpg?s=612x612&w=0&k=20&c=hCJk-9gsOff8Fac04a11VMOwflMYiRXUVfAj3UTn67U="
+                            alt="African American Female Doctor">
+                    </figure>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
