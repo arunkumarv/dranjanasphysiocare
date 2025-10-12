@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            background-color: rgb(231, 246, 252);
-            /* Set background color */
+            
+            /* Set background to gradient */
         }
 
         /* Custom class to force 1024px maximum width on the navbar container */
@@ -43,8 +43,8 @@
             border: none;
             /* Remove border */
             border-radius: 6px;
-            background-color: rgb(231, 246, 252);
-            /* Set background color */
+            background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));
+            /* Set background to gradient */
             height: 100%;
             /* Make sure boxes are equal height within the column */
         }
@@ -71,14 +71,33 @@
         }
 
         /* Adjustments for smaller screens (mobile horizontal view) */
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
+            .content-box .title {
+                font-size: 2.25rem !important;
+                /* Set title font size for desktop */
+            }
+
             .main-content-section .column {
                 padding-left: 0 !important;
                 padding-right: 0 !important;
             }
+
             .content-box {
-                padding: 0 !important; /* Remove padding from content-box on mobile */
-                width: 100% !important; /* Ensure full width */
+                text-align: center;
+                padding: 10 !important;
+                /* Remove padding from content-box on mobile */
+                width: 100% !important;
+                /* Ensure full width */
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            .content-box .title {
+                font-size: 1.75rem !important;
+                /* Set title font size for desktop */
+            }
+            .styled-image {
+                padding: 30px;
             }
         }
     </style>
@@ -86,10 +105,10 @@
 
 <body>
     <nav class="navbar is-white" role="navigation" aria-label="main navigation">
-        <div class="container is-max-1024">
+        <div class="container is-max-1024" style="padding-left:20px; padding-right: 20px;">
             <div class="navbar-brand">
                 <a class="navbar-item" href="#">
-                    <span class="has-text-weight-bold is-size-5">Dr Anjana's Physio Clinic</span>
+                    <span class="has-text-weight-bold is-size-5">Dr. Anjana S. Raj</span>
                 </a>
 
                 <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -111,42 +130,57 @@
             </div>
         </div>
     </nav>
-    <div class="container is-max-1024">
-        <section class="section main-content-section">
-            <div class="columns is-desktop">
-
-                <div class="column">
-                    <div class="content-box">
-                        <div>
-                            <span class="tag is-primary is-medium is-rounded is-light has-text-weight-bold">
-                                CERTIFIED PHYSIOTHERAPIST
-                            </span>
-                        </div>
-                        
-                        <h3 class="title is-5" style="color: rgb(28, 55, 136);">Dr. Anjana S. Raj</h3>
-                        <p>This space is ideal for a detailed biography, a welcome message, or a high-impact call to
-                            action.</p>
-                        <p>On larger screens (desktop/laptop), this column sits directly next to Column Two, taking up
-                            50% of the available width.</p>
-                        <p>On smaller screens (mobile/tablet), Bulma automatically makes this column full width (100%),
-                            pushing Column Two below it.</p>
-                            <div class="buttons mt-4">
+    
+    <div style="background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));">
+        <div class="container is-max-1024">
+            <section class="section main-content-section">
+                <div class="columns is-desktop">
+    
+                    <div class="column has-text-centered-mobile">
+                        <div class="content-box  mt-0 mt-desktop-5">
+                            <div>
+                                <span class="tag is-primary is-medium is-rounded is-light has-text-weight-bold">
+                                    CERTIFIED PHYSIOTHERAPIST
+                                </span>
+                            </div>
+    
+                            <h3 class="title is-5" style="color: rgb(28, 55, 136);">Dr. Anjana S. Raj</h3>
+                            <p>This space is ideal for a detailed biography, a welcome message, or a high-impact call to
+                                action.</p>
+                            <p>On larger screens (desktop/laptop), this column sits directly next to Column Two, taking up
+                                50% of the available width.</p>
+                            <p>On smaller screens (mobile/tablet), Bulma automatically makes this column full width (100%),
+                                pushing Column Two below it.</p>
+                            <div class="mt-4">
                                 <button class="button is-link is-dark">Book Appointment</button>
                                 <button class="button is-primary is-light">Services</button>
-                              </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="column">
+                        <figure class="image">
+                            <img class="styled-image"
+                                src="https://media.istockphoto.com/id/171296819/photo/african-american-female-doctor-holding-a-clipboard-isolated.jpg?s=612x612&w=0&k=20&c=hCJk-9gsOff8Fac04a11VMOwflMYiRXUVfAj3UTn67U="
+                                alt="African American Female Doctor">
+                        </figure>
+                    </div>
+    
                 </div>
-                <div class="column">
-                    <figure class="image">
-                        <img class="styled-image"
-                            src="https://media.istockphoto.com/id/171296819/photo/african-american-female-doctor-holding-a-clipboard-isolated.jpg?s=612x612&w=0&k=20&c=hCJk-9gsOff8Fac04a11VMOwflMYiRXUVfAj3UTn67U="
-                            alt="African American Female Doctor">
-                    </figure>
-                </div>
-
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
+    <div style="background:  rgb(238, 249, 255);">
+    <div class="container is-max-1024">
+        <div class="has-text-centered pt-4">
+            <span class="tag is-primary is-light">About Dr. Anjana</span>
+            <div class="is-size-3">Dedicated to your health & Wellness</div>
+            <div style="max-width: 500px; margin: auto;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            </div>
+            
+        </div>
+    </div>
+</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
