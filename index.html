@@ -7,9 +7,12 @@
     <title>Dr. Anjana's Physio Clinic</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            
+            font-family: 'Roboto', sans-serif;
+            /* Set entire page font to Roboto */
+            background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));
             /* Set background to gradient */
         }
 
@@ -39,11 +42,11 @@
         }
 
         .content-box {
-            padding: 20px;
+            /* padding: 20px; */
             border: none;
             /* Remove border */
             border-radius: 6px;
-            background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));
+
             /* Set background to gradient */
             height: 100%;
             /* Make sure boxes are equal height within the column */
@@ -96,9 +99,22 @@
                 font-size: 1.75rem !important;
                 /* Set title font size for desktop */
             }
+
             .styled-image {
                 padding: 30px;
             }
+        }
+
+        .custom-card {
+            border-radius: 1rem;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .section-title {
+            border-bottom: 2px solid #00d1b2;
+            display: inline-block;
+
         }
     </style>
 </head>
@@ -124,18 +140,18 @@
                     <a class="navbar-item" href="#">Home</a>
                     <a class="navbar-item" href="#">About</a>
                     <a class="navbar-item" href="#">Services</a>
-                    <a class="navbar-item" href="#">Blog</a>
+                    <a class="navbar-item" href="#">FAQs</a>
                     <a class="navbar-item" href="#">Contact</a>
                 </div>
             </div>
         </div>
     </nav>
-    
+
     <div style="background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));">
         <div class="container is-max-1024">
             <section class="section main-content-section">
                 <div class="columns is-desktop">
-    
+
                     <div class="column has-text-centered-mobile">
                         <div class="content-box  mt-0 mt-desktop-5">
                             <div>
@@ -143,14 +159,13 @@
                                     CERTIFIED PHYSIOTHERAPIST
                                 </span>
                             </div>
-    
+
                             <h3 class="title is-5" style="color: rgb(28, 55, 136);">Dr. Anjana S. Raj</h3>
-                            <p>This space is ideal for a detailed biography, a welcome message, or a high-impact call to
-                                action.</p>
-                            <p>On larger screens (desktop/laptop), this column sits directly next to Column Two, taking up
-                                50% of the available width.</p>
-                            <p>On smaller screens (mobile/tablet), Bulma automatically makes this column full width (100%),
-                                pushing Column Two below it.</p>
+                            <p>
+                                I’m a freelance physiotherapist dedicated to helping people restore mobility and live
+                                pain-free through personalized treatment plans. With a focus on evidence-based
+                                techniques, I aim to make quality physiotherapy accessible to everyone.
+                            </p>
                             <div class="mt-4">
                                 <button class="button is-link is-dark">Book Appointment</button>
                                 <button class="button is-primary is-light">Services</button>
@@ -164,23 +179,62 @@
                                 alt="African American Female Doctor">
                         </figure>
                     </div>
-    
+
                 </div>
             </section>
         </div>
     </div>
     <div style="background:  rgb(238, 249, 255);">
-    <div class="container is-max-1024">
-        <div class="has-text-centered pt-4">
-            <span class="tag is-primary is-light">About Dr. Anjana</span>
-            <div class="is-size-3">Dedicated to your health & Wellness</div>
-            <div style="max-width: 500px; margin: auto;">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-            </div>
-            
+        <div class="container is-max-1024">
+            <section class="section main-content-section">
+                <div class="has-text-centered pt-4">
+                    <span class="tag is-primary is-light">About Dr. Anjana</span>
+                    <div class="is-size-3">Dedicated to your health & Wellness</div>
+                    <div style="max-width: 500px; margin: auto;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+                <div class="columns is-desktop mt-5">
+                    <div class="column" id="about-me">
+                        <figure class="image">
+                            <img class="styled-image"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRes0Mc6IT0g0bj7skOJ9w9llw--cOZtdMWSw&s"
+                                alt="African American Female Doctor">
+                        </figure>
+                    </div>
+                    <div class="column has-text-centered-mobile">
+                        <div class="content-box">
+                            <div class="card custom-card is-rounded">
+
+
+                                <div class="card-content">
+                                    <!-- Education Section -->
+                                    <div class="content mb-5">
+                                        <h4 class="is-size-5 section-title">Education</h4>
+                                        <ul>
+                                            <li><strong>BPT –</strong> Kerala University of Health Sciences, 2018</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- Experience Section -->
+                                    <div class="content">
+                                        <h4 class="is-size-5 section-title">Experience</h4>
+                                        <ul>
+                                            <li><strong>Senior Physiotherapist –</strong> City Hospital, Kochi
+                                                (2021–Present)</li>
+                                            <li><strong>Intern –</strong> Government Medical College, Trivandrum
+                                                (2018–2019)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
-</div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
