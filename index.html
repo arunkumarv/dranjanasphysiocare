@@ -11,73 +11,51 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            /* Set entire page font to Roboto */
             background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));
-            /* Set background to gradient */
         }
 
-        /* Custom class to force 1024px maximum width on the navbar container */
         .is-max-1024 {
             max-width: 1024px !important;
             width: 100%;
             margin: 0 auto;
         }
 
-        /* Style for the navbar shadow */
         .navbar {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
-        /* Style for the main content area */
         .main-content-section {
             padding-top: 2rem;
-            /* Add some space above the content */
             padding-bottom: 2rem;
             padding-left: 0;
-            /* Remove left padding */
             padding-right: 0;
-            /* Remove right padding */
             min-height: 80vh;
-            /* Ensure the content section is visible */
         }
 
         .content-box {
-            /* padding: 20px; */
+            padding: 20px;
             border: none;
-            /* Remove border */
             border-radius: 6px;
-
-            /* Set background to gradient */
             height: 100%;
-            /* Make sure boxes are equal height within the column */
         }
 
         .styled-image {
             border-radius: 20px;
-            /* More curved border */
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            /* Shadow */
             width: 100%;
-            /* Ensure it takes full width of its container */
             height: auto;
-            /* Maintain aspect ratio */
             display: block;
-            /* Remove extra space below image */
         }
 
-        /* Desktop specific styles */
         @media screen and (min-width: 1024px) {
             .content-box .title {
                 font-size: 3.25rem !important;
-                /* Set title font size for desktop */
             }
         }
 
-        /* Adjustments for smaller screens (mobile horizontal view) */
         @media screen and (max-width: 1024px) {
             .content-box .title {
                 font-size: 2.25rem !important;
-                /* Set title font size for desktop */
             }
 
             .main-content-section .column {
@@ -88,16 +66,13 @@
             .content-box {
                 text-align: center;
                 padding: 10 !important;
-                /* Remove padding from content-box on mobile */
                 width: 100% !important;
-                /* Ensure full width */
             }
         }
 
         @media screen and (max-width: 1024px) {
             .content-box .title {
                 font-size: 1.75rem !important;
-                /* Set title font size for desktop */
             }
 
             .styled-image {
@@ -195,30 +170,28 @@
                             labore et dolore magna aliqua. </p>
                     </div>
                 </div>
-                <div class="columns is-desktop mt-5">
-                    <div class="column" id="about-me">
-                        <figure class="image">
+                <div class="columns is-desktop mt-5 is-flex is-flex-direction-column-mobile">
+                    <div class="column is-flex is-flex-direction-column" id="about-me">
+                        <figure class="image is-flex-grow-1">
                             <img class="styled-image"
                                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRes0Mc6IT0g0bj7skOJ9w9llw--cOZtdMWSw&s"
                                 alt="African American Female Doctor">
                         </figure>
                     </div>
-                    <div class="column has-text-centered-mobile">
-                        <div class="content-box">
+                    <div class="column is-flex is-flex-direction-column has-text-centered-mobile">
+                        <div class="content-box is-flex-grow-1">
                             <div class="card custom-card is-rounded">
 
 
                                 <div class="card-content">
-                                    <!-- Education Section -->
-                                    <div class="content mb-5">
+                                    <div>
                                         <h4 class="is-size-5 section-title">Education</h4>
                                         <ul>
                                             <li><strong>BPT –</strong> Kerala University of Health Sciences, 2018</li>
                                         </ul>
                                     </div>
 
-                                    <!-- Experience Section -->
-                                    <div class="content">
+                                    <div>
                                         <h4 class="is-size-5 section-title">Experience</h4>
                                         <ul>
                                             <li><strong>Senior Physiotherapist –</strong> City Hospital, Kochi
@@ -238,19 +211,14 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Get all "navbar-burger" elements
             const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
 
-            // Check if there are any navbar burgers
             if ($navbarBurgers.length > 0) {
-                // Add a click event on each of them
                 $navbarBurgers.forEach(el => {
                     el.addEventListener('click', () => {
-                        // Get the target from the "data-target" attribute
                         const target = el.dataset.target;
                         const $target = document.getElementById(target);
 
-                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
                         el.classList.toggle('is-active');
                         $target.classList.toggle('is-active');
                     });
