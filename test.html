@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Care Journey</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <style>
+    .journey-card {
+      background: linear-gradient(135deg, #1b4b91 0%, #109d8d 100%);
+      border-radius: 20px;
+      color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .journey-card h2 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .journey-card p.subtitle {
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+
+    .journey-step {
+      text-align: center;
+    }
+
+    .journey-step .number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      opacity: 0.25;
+    }
+
+    .journey-step hr {
+      width: 40px;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: none;
+      margin: 0.5rem auto 0.75rem;
+    }
+
+    .journey-step h4 {
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+
+    .journey-step p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .journey-step {
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="section">
+    <div class="container">
+      <div class="journey-card">
+        <h2 class="title is-3">Your Care Journey</h2>
+        <p class="subtitle">A streamlined process designed with your comfort and health in mind</p>
+
+        <div class="columns is-multiline is-variable is-6">
+          <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+            <div class="journey-step">
+              <div class="number">01</div>
+              <hr>
+              <h4>Schedule</h4>
+              <p>Book your appointment online or by phone at your convenience</p>
+            </div>
+          </div>
+
+          <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+            <div class="journey-step">
+              <div class="number">02</div>
+              <hr>
+              <h4>Consultation</h4>
+              <p>Comprehensive evaluation and discussion of your health concerns</p>
+            </div>
+          </div>
+
+          <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+            <div class="journey-step">
+              <div class="number">03</div>
+              <hr>
+              <h4>Treatment Plan</h4>
+              <p>Personalized care plan tailored to your specific needs and goals</p>
+            </div>
+          </div>
+
+          <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+            <div class="journey-step">
+              <div class="number">04</div>
+              <hr>
+              <h4>Follow-Up</h4>
+              <p>Ongoing support and monitoring to ensure optimal health outcomes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

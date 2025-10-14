@@ -29,7 +29,7 @@
             padding-bottom: 2rem;
             padding-left: 0;
             padding-right: 0;
-            min-height: 80vh;
+            /* min-height: 80vh; */
         }
 
         .content-box {
@@ -81,11 +81,14 @@
         }
 
         @media screen and (max-width: 768px) {
-            .columns.is-desktop.mt-5 { /* Target the specific columns container */
+            .columns.is-desktop.mt-5 {
+                /* Target the specific columns container */
                 flex-direction: column !important;
             }
+
             .columns.is-desktop.mt-5 .column {
-                width: 100% !important; /* Ensure columns take full width on mobile */
+                width: 100% !important;
+                /* Ensure columns take full width on mobile */
             }
         }
 
@@ -93,9 +96,12 @@
             border-radius: 1rem;
             box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            height: 100%; /* Make custom-card height to that of the parent content-box */
-            display: flex; /* Enable flexbox for vertical alignment */
-            flex-direction: column; /* Stack content vertically */
+            height: 100%;
+            /* Make custom-card height to that of the parent content-box */
+            display: flex;
+            /* Enable flexbox for vertical alignment */
+            flex-direction: column;
+            /* Stack content vertically */
         }
 
         .section-title {
@@ -103,6 +109,120 @@
             display: inline-block;
 
         }
+
+        .service-card-custom {
+            background: linear-gradient(180deg, #eaf4ff 0%, #eafaf3 100%);
+            border-radius: 16px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            height: 100%;
+        }
+
+        .service-card-icon-box {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card-icon-box svg {
+            width: 24px;
+            height: 24px;
+            stroke: #009879;
+        }
+
+        .service-card-custom h3 {
+            font-weight: 700;
+            color: #1d3a6f;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-card-custom p {
+            color: #4a4a4a;
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card-custom ul {
+            list-style-type: disc;
+            margin-left: .5rem;
+            color: #4a4a4a;
+            font-size: 0.7rem;
+        }
+
+        .service-card-custom li::marker {
+            color: #00a47a;
+        }
+
+        .service-card-insurance {
+            background: linear-gradient(180deg, #eaf4ff 0%, #f2f8ff 100%);
+        }
+
+        .service-card-accessible {
+            background: linear-gradient(180deg, #eafaf3 0%, #f3fcf5 100%);
+        }
+        .journey-card {
+      background: linear-gradient(135deg, #1b4b91 0%, #109d8d 100%);
+      border-radius: 20px;
+      color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .journey-card h2 {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .journey-card p.subtitle {
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 3rem;
+      font-size: 1rem;
+    }
+
+    .journey-step {
+      text-align: center;
+    }
+
+    .journey-step .number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      opacity: 0.25;
+    }
+
+    .journey-step hr {
+      width: 40px;
+      height: 2px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: none;
+      margin: 0.5rem auto 0.75rem;
+    }
+
+    .journey-step h4 {
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+
+    .journey-step p {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .journey-step {
+        margin-bottom: 2rem;
+      }
+    }
     </style>
 </head>
 
@@ -161,9 +281,7 @@
                     </div>
                     <div class="column">
                         <figure class="image">
-                            <img class="styled-image"
-                                src="./image1.jpg"
-                                alt="African American Female Doctor">
+                            <img class="styled-image" src="./image1.jpg" alt="African American Female Doctor">
                         </figure>
                     </div>
 
@@ -182,12 +300,10 @@
                             labore et dolore magna aliqua. </p>
                     </div>
                 </div>
-                <div class="columns is-desktop mt-5 is-flex is-flex-direction-column-mobile" id="about">
-                    <div class="column is-flex is-flex-direction-column" id="about-me">
+                <div class="columns is-desktop mt-5 is-flex is-flex-direction-column-mobile">
+                    <div class="column is-flex is-flex-direction-column">
                         <figure class="image is-flex-grow-1">
-                            <img class="styled-image"
-                                src="./image2.jpeg"
-                                alt="African American Female Doctor">
+                            <img class="styled-image" src="./image2.jpeg" alt="African American Female Doctor">
                         </figure>
                     </div>
                     <div class="column is-flex is-flex-direction-column has-text-centered-mobile">
@@ -208,13 +324,284 @@
                                         <ul class="mt-2">
                                             <li><strong>Senior Physiotherapist –</strong><br> City Hospital, Kochi
                                                 (2021–Present)</li>
-                                            <li class="mt-2"><strong>Intern –</strong><br>Government Medical College, Trivandrum
+                                            <li class="mt-2"><strong>Intern –</strong><br>Government Medical College,
+                                                Trivandrum
                                                 (2018–2019)</li>
-                                                <li class="mt-2"><strong>Intern –</strong><br>Government Medical College, Trivandrum
-                                                    (2018–2019)</li>
+                                            <li class="mt-2"><strong>Intern –</strong><br>Government Medical College,
+                                                Trivandrum
+                                                (2018–2019)</li>
                                         </ul>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div style="background:  rgb(255, 255, 255);">
+        <div class="container is-max-1024 pb-6">
+            <section class="section main-content-section">
+                <div class="has-text-centered pt-4">
+                    <span class="tag is-primary is-light">PHYSIO CARE</span>
+                    <div class="is-size-3">Physiotherapy Services</div>
+                    <div style="max-width: 500px; margin: auto;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. </p>
+                    </div>
+                </div>
+            </section>
+            <section class="">
+                <div class="container">
+                    <div class="columns is-multiline">
+                        <!-- Repeat the card 8 times -->
+                        <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                            <div class="service-card-custom">
+                                <div class="service-card-icon-box">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
+                                    </svg>
+                                </div>
+                                <h3 class="title is-5">Lorem Ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt utlabore et dolore magna aliqua
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt</li>
+                                    <li>incididunt utlabore</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Duplicate 7 more cards -->
+                        <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                            <div class="service-card-custom">
+                                <div class="service-card-icon-box">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
+                                    </svg>
+                                </div>
+                                <h3 class="title is-5">Lorem Ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt utlabore et dolore magna aliqua
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt</li>
+                                    <li>incididunt utlabore</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                            <div class="service-card-custom">
+                                <div class="service-card-icon-box">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
+                                    </svg>
+                                </div>
+                                <h3 class="title is-5">Lorem Ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt utlabore et dolore magna aliqua
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt</li>
+                                    <li>incididunt utlabore</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                            <div class="service-card-custom">
+                                <div class="service-card-icon-box">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
+                                    </svg>
+                                </div>
+                                <h3 class="title is-5">Lorem Ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt utlabore et dolore magna aliqua
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt</li>
+                                    <li>incididunt utlabore</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                            <div class="service-card-custom">
+                                <div class="service-card-icon-box">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
+                                    </svg>
+                                </div>
+                                <h3 class="title is-5">Lorem Ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt utlabore et dolore magna aliqua
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt</li>
+                                    <li>incididunt utlabore</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                            <div class="service-card-custom">
+                                <div class="service-card-icon-box">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
+                                    </svg>
+                                </div>
+                                <h3 class="title is-5">Lorem Ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt utlabore et dolore magna aliqua
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt</li>
+                                    <li>incididunt utlabore</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                            <div class="service-card-custom">
+                                <div class="service-card-icon-box">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
+                                    </svg>
+                                </div>
+                                <h3 class="title is-5">Lorem Ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt utlabore et dolore magna aliqua
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt</li>
+                                    <li>incididunt utlabore</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                            <div class="service-card-custom">
+                                <div class="service-card-icon-box">
+                                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                        <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
+                                    </svg>
+                                </div>
+                                <h3 class="title is-5">Lorem Ipsum</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt utlabore et dolore magna aliqua
+                                </p>
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>consectetur adipiscing elit</li>
+                                    <li>sed do eiusmod tempor incididunt</li>
+                                    <li>incididunt utlabore</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="section">
+                <div class="container">
+                  <div class="journey-card">
+                    <h2 class="title is-3">Your Care Journey</h2>
+                    <p class="subtitle">A streamlined process designed with your comfort and health in mind</p>
+            
+                    <div class="columns is-multiline is-variable is-6">
+                      <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                        <div class="journey-step">
+                          <div class="number">01</div>
+                          <hr>
+                          <h4>Schedule</h4>
+                          <p>Book your appointment online or by phone at your convenience</p>
+                        </div>
+                      </div>
+            
+                      <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                        <div class="journey-step">
+                          <div class="number">02</div>
+                          <hr>
+                          <h4>Consultation</h4>
+                          <p>Comprehensive evaluation and discussion of your health concerns</p>
+                        </div>
+                      </div>
+            
+                      <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                        <div class="journey-step">
+                          <div class="number">03</div>
+                          <hr>
+                          <h4>Treatment Plan</h4>
+                          <p>Personalized care plan tailored to your specific needs and goals</p>
+                        </div>
+                      </div>
+            
+                      <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
+                        <div class="journey-step">
+                          <div class="number">04</div>
+                          <hr>
+                          <h4>Follow-Up</h4>
+                          <p>Ongoing support and monitoring to ensure optimal health outcomes</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            <section>
+                <div class="container">
+                    <div class="columns is-multiline">
+                        <!-- Insurance & Payment -->
+                        <div class="column is-half-desktop is-full-mobile">
+                            <div class="service-card-custom service-card-insurance">
+                                <h3 class="title is-5">Insurance & Payment</h3>
+                                <p>
+                                    We accept most major insurance plans and offer flexible payment options
+                                    to ensure quality healthcare is accessible to all patients.
+                                </p>
+                                <ul>
+                                    <li>Most Major Insurance Plans</li>
+                                    <li>Medicare & Medicaid</li>
+                                    <li>Flexible Payment Plans</li>
+                                    <li>Cash Pay Options</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Accessible Care -->
+                        <div class="column is-half-desktop is-full-mobile">
+                            <div class="service-card-custom service-card-accessible">
+                                <h3 class="title is-5">Accessible Care</h3>
+                                <p>
+                                    Our practice is designed to provide convenient, comfortable, and accessible
+                                    healthcare for all patients in our community.
+                                </p>
+                                <ul>
+                                    <li>Extended Hours & Weekend Appointments</li>
+                                    <li>Wheelchair Accessible Facility</li>
+                                    <li>Multi-Language Support</li>
+                                    <li>Convenient Parking</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
