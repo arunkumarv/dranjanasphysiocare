@@ -260,7 +260,74 @@
   font-size: 0.9rem;
   margin: 0;
 }
+.columns.is-equal-height {
+      align-items: stretch;
+    }
 
+    .image-card,
+    .info-card {
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(18,38,63,0.06);
+      background: #fff;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* --- Image Card --- */
+    .image-card figure {
+      flex: 1;
+      height: 100%;
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* --- Info Card --- */
+    .info-card {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Scoped text styling */
+    .eduexp-title {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.25rem;
+      position: relative;
+    }
+
+    .eduexp-title::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 40px;
+      height: 2px;
+      background-color: #00bfa5;
+    }
+
+    .eduexp-text {
+      color: #444;
+      margin-bottom: 0.6rem;
+      line-height: 1.5;
+    }
+
+    .eduexp-strong {
+      color: #111;
+    }
+
+    @media (max-width: 768px) {
+      .image-card img {
+        border-radius: 16px 16px 0 0;
+      }
+    }
     </style>
 </head>
 
@@ -338,44 +405,48 @@
                             labore et dolore magna aliqua. </p>
                     </div>
                 </div>
-                <div class="columns is-desktop mt-5 is-flex is-flex-direction-column-mobile">
-                    <div class="column is-flex is-flex-direction-column">
-                        <figure class="image is-flex-grow-1">
-                            <img class="styled-image" src="./image2.jpeg" alt="African American Female Doctor">
-                        </figure>
-                    </div>
-                    <div class="column is-flex is-flex-direction-column has-text-centered-mobile">
-                        <div class="content-box is-flex-grow-1">
-                            <div class="card custom-card is-rounded">
-
-
-                                <div class="card-content is-flex-grow-1">
-                                    <div>
-                                        <h4 class="is-size-5 section-title">Education</h4>
-                                        <ul class="mt-2">
-                                            <li><strong>BPT –</strong> Kerala University of Health Sciences, 2018</li>
-                                        </ul>
-                                    </div>
-
-                                    <div>
-                                        <h4 class="is-size-5 section-title mt-3">Experience</h4>
-                                        <ul class="mt-2">
-                                            <li><strong>Senior Physiotherapist –</strong><br> City Hospital, Kochi
-                                                (2021–Present)</li>
-                                            <li class="mt-2"><strong>Intern –</strong><br>Government Medical College,
-                                                Trivandrum
-                                                (2018–2019)</li>
-                                            <li class="mt-2"><strong>Intern –</strong><br>Government Medical College,
-                                                Trivandrum
-                                                (2018–2019)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
             </section>
+            <section class="section">
+                <div class="container">
+                  <div class="columns is-variable is-5 is-vcentered is-equal-height">
+              
+                    <!-- Left Card (Image) -->
+                    <div class="column is-half">
+                      <div class="image-card">
+                        <figure class="image is-4by3">
+                          <img src="./image2.jpeg" alt="Physiotherapy session">
+                        </figure>
+                      </div>
+                    </div>
+              
+                    <!-- Right Card (Education & Experience) -->
+                    <div class="column is-half">
+                      <div class="info-card">
+                        <div class="content">
+                          <h4 class="eduexp-title">Education</h4>
+                          <p class="eduexp-text">
+                            <strong class="eduexp-strong">BPT –</strong>
+                            Kerala University of Health Sciences, 2018
+                          </p>
+              
+                          <h4 class="eduexp-title" style="margin-top:1.5rem;">Experience</h4>
+                          <p class="eduexp-text">
+                            <strong class="eduexp-strong">Physiotherapist –</strong>
+                            City Hospital, Kochi (2021–Present)
+                          </p>
+              
+                          <p class="eduexp-text">
+                            <strong class="eduexp-strong">Intern –</strong>
+                            Government Medical College, Trivandrum (2018–2019)
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </section>
         </div>
     </div>
     <div style="background:  rgb(255, 255, 255);">
