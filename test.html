@@ -2,115 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Care Journey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Info Cards</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
   <style>
-    .journey-card {
-      background: linear-gradient(135deg, #1b4b91 0%, #109d8d 100%);
-      border-radius: 20px;
-      color: #fff;
-      padding: 3rem 2rem;
-      text-align: center;
+    .contact-card {
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      height: 100%;
     }
-
-    .journey-card h2 {
+    .contact-icon-box {
+      background-color: #e9f8f6;
+      border-radius: 8px;
+      padding: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .contact-icon-box i {
+      font-size: 1.5rem;
+      color: #009688;
+    }
+    .card-title {
       font-weight: 700;
+      color: #1b3a57;
       margin-bottom: 0.5rem;
-      color: #fff;
-    }
-
-    .journey-card p.subtitle {
-      color: rgba(255, 255, 255, 0.85);
-      margin-bottom: 3rem;
-      font-size: 1rem;
-    }
-
-    .journey-step {
-      text-align: center;
-    }
-
-    .journey-step .number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      opacity: 0.25;
-    }
-
-    .journey-step hr {
-      width: 40px;
-      height: 2px;
-      background-color: rgba(255, 255, 255, 0.4);
-      border: none;
-      margin: 0.5rem auto 0.75rem;
-    }
-
-    .journey-step h4 {
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.3rem;
-      font-size: 1.1rem;
-    }
-
-    .journey-step p {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .journey-step {
-        margin-bottom: 2rem;
-      }
     }
   </style>
+  <script src="https://kit.fontawesome.com/a2e0e6e0e4.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <section class="section">
-    <div class="container">
-      <div class="journey-card">
-        <h2 class="title is-3">Your Care Journey</h2>
-        <p class="subtitle">A streamlined process designed with your comfort and health in mind</p>
+<section class="section">
+  <div class="container">
+    <div class="columns is-multiline is-variable is-4">
 
-        <div class="columns is-multiline is-variable is-6">
-          <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
-            <div class="journey-step">
-              <div class="number">01</div>
-              <hr>
-              <h4>Schedule</h4>
-              <p>Book your appointment online or by phone at your convenience</p>
-            </div>
-          </div>
-
-          <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
-            <div class="journey-step">
-              <div class="number">02</div>
-              <hr>
-              <h4>Consultation</h4>
-              <p>Comprehensive evaluation and discussion of your health concerns</p>
-            </div>
-          </div>
-
-          <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
-            <div class="journey-step">
-              <div class="number">03</div>
-              <hr>
-              <h4>Treatment Plan</h4>
-              <p>Personalized care plan tailored to your specific needs and goals</p>
-            </div>
-          </div>
-
-          <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
-            <div class="journey-step">
-              <div class="number">04</div>
-              <hr>
-              <h4>Follow-Up</h4>
-              <p>Ongoing support and monitoring to ensure optimal health outcomes</p>
-            </div>
-          </div>
+      <!-- Phone -->
+      <div class="column is-3-desktop is-6-tablet is-12-mobile">
+        <div class="contact-card">
+          <div class="contact-icon-box"><i class="fas fa-phone"></i></div>
+          <p class="card-title">Phone</p>
+          <p>Main: (555) 123-4567</p>
+          <p>Emergency: (555) 987-6543</p>
         </div>
       </div>
+
+      <!-- Email -->
+      <div class="column is-3-desktop is-6-tablet is-12-mobile">
+        <div class="contact-card">
+          <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+          <p class="card-title">Email</p>
+          <p>info@drsarahmitchell.com</p>
+          <p>appointments@drsarahmitchell.com</p>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="column is-3-desktop is-6-tablet is-12-mobile">
+        <div class="contact-card">
+          <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
+          <p class="card-title">Location</p>
+          <p>123 Medical Plaza, Suite 400<br>San Francisco, CA 94102</p>
+        </div>
+      </div>
+
+      <!-- Hours -->
+      <div class="column is-3-desktop is-6-tablet is-12-mobile">
+        <div class="contact-card">
+          <div class="contact-icon-box"><i class="fas fa-clock"></i></div>
+          <p class="card-title">Hours</p>
+          <p>Mon–Fri: 8:00 AM – 6:00 PM</p>
+          <p>Sat: 9:00 AM – 2:00 PM</p>
+        </div>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
 </body>
 </html>
