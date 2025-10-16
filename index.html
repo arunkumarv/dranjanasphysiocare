@@ -670,7 +670,7 @@
       }
 
       .review-card {
-        flex: 0 0 calc(25% - 1rem);
+        flex: 0 0 calc(50% - 1rem);
         margin-right: 1rem;
         background: #fff;
         border-radius: 8px;
@@ -714,11 +714,6 @@
         color: #333
       }
 
-      @media (max-width:1024px) {
-        .review-card {
-          flex: 0 0 calc(50% - 1rem)
-        }
-      }
 
       @media (max-width:768px) {
         .review-card {
@@ -729,8 +724,7 @@
     </style>
 
     <section class="section">
-      <div class="container is-max-1024 pb-6">
-        <h2 class="title is-4">Customer Reviews</h2>
+      <div class="container is-max-1024">
         <div class="reviews-carousel-container">
           <div class="reviews-carousel-track" id="review-track"></div>
         </div>
@@ -741,10 +735,10 @@
       /* ---------- Reviews array with avatar ---------- */
       const reviews = [
         {
-          name: "Achu Aravind",
-          date: "Sep 4, 2024",
-          text: "Amazing service and top-notch creativity.",
-          avatar: "https://lh3.googleusercontent.com/a-/ALV-UjUX8snlP77rMsrtXMNIY60eobaB6mLU5IbOeB5_ta8wkfZeGVB9Bg=w72-h72-p-rp-mo-br100"
+          name: "Nibin Nadaraj",
+          date: "Sep 16, 2025",
+          text: "I recently had few sessions of physiotherapy here, and I couldn't be happier with my experience. Doctor Anjana was really polite, knowledgeable, and genuinely caring. They took the time to listen to my concerns and tailored the treatment to fit my needs. Thank you for such a positive experience.",
+          avatar: "https://lh3.googleusercontent.com/a-/ALV-UjWq0KYk8qDxO_zziT4U085bFkQTp5j2Su24X0twLWSr8PCdwcDf=w72-h72-p-rp-mo-br100"
         },
         {
           name: "Azhar Ismail",
