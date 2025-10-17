@@ -248,15 +248,13 @@
     .contact-icon-box {
       background-color: #e9f8f6;
       border-radius: 8px;
-      padding: 0.75rem;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1rem;
+
     }
 
     .contact-icon-box i {
-      font-size: 1.5rem;
       color: #009688;
     }
 
@@ -283,11 +281,18 @@
       align-items: stretch;
     }
 
-    .image-card,
-    .info-card {
+    .image-card {
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(18, 38, 63, 0.06);
       background: #fff;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .info-card {
+
       overflow: hidden;
       height: 100%;
       display: flex;
@@ -312,6 +317,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      font-size: 0.90rem;
     }
 
     /* Scoped text styling */
@@ -347,6 +353,32 @@
         border-radius: 16px 16px 0 0;
       }
     }
+
+    .faq-section {
+      border-radius: 8px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #ededed;
+      padding: 0 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      color: #363636;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-answer {
+      color: #7a7a7a;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 
@@ -377,7 +409,7 @@
     </div>
   </nav>
 
-  <div style="background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));">
+  <div id="home" style="background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));">
     <div class="container is-max-1024">
       <section class="section main-content-section">
         <div class="columns is-desktop">
@@ -392,7 +424,7 @@
 
               <h3 class="title is-5" style="color: rgb(28, 55, 136);">Dr. Anjana S. Raj</h3>
               <p>
-                I’m a freelance physiotherapist dedicated to helping people restore mobility and live
+                I’m a physiotherapist dedicated to helping people restore mobility and live
                 pain-free through personalized treatment plans. With a focus on evidence-based
                 techniques, I aim to make quality physiotherapy accessible to everyone.
               </p>
@@ -412,15 +444,14 @@
       </section>
     </div>
   </div>
-  <div style="background:  rgb(238, 249, 255);">
+  <div id="about" style="background:  rgb(238, 249, 255);">
     <div class="container is-max-1024 pb-6">
       <section class="section main-content-section">
         <div class="has-text-centered pt-4">
           <span class="tag is-primary is-light">About Dr. Anjana</span>
           <div class="is-size-3">Dedicated to your health & Wellness</div>
           <div style="max-width: 500px; margin: auto;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. </p>
+            <p>Your Partner in Healing and Mobility. </p>
           </div>
         </div>
 
@@ -442,21 +473,14 @@
             <div class="column is-half">
               <div class="info-card">
                 <div class="content">
-                  <h4 class="eduexp-title">Education</h4>
+                  <h4 class="eduexp-title">About Anjana</h4>
                   <p class="eduexp-text">
-                    <strong class="eduexp-strong">BPT –</strong>
-                    Kerala University of Health Sciences, 2018
-                  </p>
-
-                  <h4 class="eduexp-title" style="margin-top:1.5rem;">Experience</h4>
-                  <p class="eduexp-text">
-                    <strong class="eduexp-strong">Physiotherapist –</strong>
-                    City Hospital, Kochi (2021–Present)
-                  </p>
-
-                  <p class="eduexp-text">
-                    <strong class="eduexp-strong">Intern –</strong>
-                    Government Medical College, Trivandrum (2018–2019)
+                    She is a qualified physiotherapist with a Bachelor of Physiotherapy from the School of Medical
+                    Education, Angamaly (Affiliated to Mahatma Gandhi University, Kottayam). She has gained valuable
+                    professional experience working as a physiotherapist at Government Hospital, Punalur, and Padmavathy
+                    Hospital, Shasthamkottai. She also completed internships at XXX Hospital, Edapally, and Government
+                    Hospitals in Kollam and Ernakulam, building a strong foundation in patient care, rehabilitation, and
+                    clinical expertise.
                   </p>
                 </div>
               </div>
@@ -467,15 +491,14 @@
       </section>
     </div>
   </div>
-  <div style="background:  rgb(255, 255, 255);">
+  <div id="services" style="background:  rgb(255, 255, 255);">
     <div class="container is-max-1024 pb-6">
       <section class="section main-content-section">
         <div class="has-text-centered pt-4">
           <span class="tag is-primary is-light">PHYSIO CARE</span>
           <div class="is-size-3">Physiotherapy Services</div>
           <div style="max-width: 500px; margin: auto;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. </p>
+            <p>Restoring Strength, Movement, and Confidence. </p>
           </div>
         </div>
       </section>
@@ -486,20 +509,18 @@
             <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
               <div class="service-card-custom">
                 <div class="service-card-icon-box">
-                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
-                  </svg>
+                  <div class="contact-icon-box"><i class="fas fa-stethoscope"></i></div>
                 </div>
-                <h3 class="title is-5">Lorem Ipsum</h3>
+                <h3 class="title is-5">Musculoskeletal Therapy</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt utlabore et dolore magna aliqua
+                  Treatment for joint, muscle, and bone injuries using exercises, manual therapy, and modalities like
+                  ultrasound or TENS.
                 </p>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>consectetur adipiscing elit</li>
-                  <li>sed do eiusmod tempor incididunt</li>
-                  <li>incididunt utlabore</li>
+                  <li>Manual Therapy</li>
+                  <li>Joint Mobilization / Manipulation</li>
+                  <li>Soft Tissue Release</li>
+                  <li>Myofascial Release</li>
                 </ul>
               </div>
             </div>
@@ -508,60 +529,54 @@
             <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
               <div class="service-card-custom">
                 <div class="service-card-icon-box">
-                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
-                  </svg>
+                  <div class="contact-icon-box"><i class="fas fa-head-side-virus"></i></div>
                 </div>
-                <h3 class="title is-5">Lorem Ipsum</h3>
+                <h3 class="title is-5">Neurological Physiotherapy</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt utlabore et dolore magna aliqua
+                  Therapy for conditions like stroke, spinal cord injury, or Parkinson’s disease to improve movement,
+                  balance, and coordination.
                 </p>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>consectetur adipiscing elit</li>
-                  <li>sed do eiusmod tempor incididunt</li>
-                  <li>incididunt utlabore</li>
+                  <li>Stroke Rehabilitation (CVA Rehab)</li>
+                  <li>Spinal Cord Injury Rehabilitation</li>
+                  <li>Parkinson’s Disease Rehabilitation</li>
+                  <li>Multiple Sclerosis (MS) Management</li>
                 </ul>
               </div>
             </div>
             <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
               <div class="service-card-custom">
                 <div class="service-card-icon-box">
-                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
-                  </svg>
+                  <div class="contact-icon-box"><i class="fas fa-heart"></i></div>
                 </div>
-                <h3 class="title is-5">Lorem Ipsum</h3>
+                <h3 class="title is-5">Cardiorespiratory Physiotherapy</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt utlabore et dolore magna aliqua
+                  Techniques to improve lung and heart function, including breathing exercises and post-surgical
+                  rehabilitation.
                 </p>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>consectetur adipiscing elit</li>
-                  <li>sed do eiusmod tempor incididunt</li>
-                  <li>incididunt utlabore</li>
+                  <li>Pulmonary Rehabilitation</li>
+                  <li>Post-COVID / Post-ICU Rehabilitation</li>
+                  <li>Airway Clearance Techniques</li>
+                  <li>Chest Physiotherapy (CPT)</li>
                 </ul>
               </div>
             </div>
             <div class="column is-one-quarter-desktop is-half-tablet is-full-mobile">
               <div class="service-card-custom">
                 <div class="service-card-icon-box">
-                  <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M12 21s-8-5.434-8-11.5S7.477 3 12 8.5 20 3 20 9.5 12 21 12 21z" />
-                  </svg>
+                  <div class="contact-icon-box"><i class="fas fa-snowboarding"></i></div>
                 </div>
-                <h3 class="title is-5">Lorem Ipsum</h3>
+                <h3 class="title is-5">Sports & Injury Rehabilitation</h3>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt utlabore et dolore magna aliqua
+                  Management and prevention of sports-related injuries with strength training, conditioning, and
+                  recovery programs.
                 </p>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet</li>
-                  <li>consectetur adipiscing elit</li>
-                  <li>sed do eiusmod tempor incididunt</li>
-                  <li>incididunt utlabore</li>
+                  <li>Sports Injury Management</li>
+                  <li>Kinesio Taping / Athletic Taping</li>
+                  <li>Biomechanical Assessment</li>
+                  <li>Return-to-Sport Conditioning</li>
                 </ul>
               </div>
             </div>
@@ -639,16 +654,16 @@
             <!-- Accessible Care -->
             <div class="column is-half-desktop is-full-mobile">
               <div class="service-card-custom service-card-accessible">
-                <h3 class="title is-5">Accessible Care</h3>
+                <h3 class="title is-5">Accessible Physio Care</h3>
                 <p>
                   Our practice is designed to provide convenient, comfortable, and accessible
-                  healthcare for all patients in our community.
+                  physio care for all patients in our community.
                 </p>
                 <ul>
-                  <li>Extended Hours & Weekend Appointments</li>
-                  <li>Wheelchair Accessible Facility</li>
-                  <li>Multi-Language Support</li>
-                  <li>Convenient Parking</li>
+                  <li>One-on-one sessions tailored to each patient’s specific needs and goals.</li>
+                  <li>Appointments can be arranged at convenient times for the patient.</li>
+                  <li>Option for home visits or virtual sessions, providing comfort and accessibility.</li>
+                  <li>Lower overhead costs compared to large clinics, making therapy more affordable.</li>
                 </ul>
               </div>
             </div>
@@ -821,15 +836,119 @@
       });
     </script>
   </div>
-  <div style="background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));">
+  <div id="faqs" style="background: rgb(238, 249, 255);">
+    <section class="pt-3">
+      <div class="has-text-centered pt-4">
+        <span class="tag is-primary is-light">CONFUSED ?</span>
+        <div class="is-size-3">Frequently Asked  Questions</div>
+        <div style="max-width: 500px; margin: auto;">
+          <p>Restoring Strength, Movement, and Confidence. </p>
+        </div>
+      </div>
+    </section>
+    <section class="">
+      <div class="container is-max-1024">
+          <div class="faq-section section">
+              <div class="columns is-multiline">
+                  <div class="column is-half">
+                      <div class="faq-item">
+                          <div class="faq-question">
+                            What is physiotherapy?
+                          </div>
+                          <p class="faq-answer">
+                            Physiotherapy helps restore movement and function using exercises and physical techniques.                          </p>
+                      </div>
+                  </div>
+
+                  <div class="column is-half">
+                      <div class="faq-item">
+                          <div class="faq-question">
+                            Do I need a doctor’s referral?
+                          </div>
+                          <p class="faq-answer">
+                            Usually not — you can visit a physiotherapist directly. Sometimes for insurence claims, it may be required.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="column is-half">
+                      <div class="faq-item">
+                          <div class="faq-question">
+                            What conditions do physiotherapists treat?
+                          </div>
+                          <p class="faq-answer">
+                            They treat pain, injuries, joint, muscle, and movement problems.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="column is-half">
+                      <div class="faq-item">
+                          <div class="faq-question">
+                            What happens during the first visit?
+                          </div>
+                          <p class="faq-answer">
+                            The therapist assesses your condition and begins a personalized treatment plan.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="column is-half">
+                      <div class="faq-item">
+                          <div class="faq-question">
+                            How long does each session take?
+                          </div>
+                          <p class="faq-answer">
+                            Typically 30 to 60 minutes.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="column is-half">
+                      <div class="faq-item">
+                          <div class="faq-question">
+                            How many sessions will I need?
+                          </div>
+                          <p class="faq-answer">
+                            It depends on your condition and recovery speed.
+                          </p>
+                      </div>
+                  </div>
+
+                  <div class="column is-half">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                          What should I wear to therapy?
+                        </div>
+                        <p class="faq-answer">
+                          Loose, comfortable clothes that allow free movement.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="column is-half">
+                  <div class="faq-item">
+                      <div class="faq-question">
+                        Is physiotherapy painful?
+                      </div>
+                      <p class="faq-answer">
+                        It may cause mild discomfort but should not be painful.
+                      </p>
+                  </div>
+              </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  </div>
+  <div id="contact" style="background: linear-gradient(to bottom, rgb(229, 243, 252), rgb(235, 245, 235));">
     <div class="container is-max-1024 pb-6">
       <section class="section main-content-section">
         <div class="has-text-centered pt-4">
           <span class="tag is-primary is-light">GET IN TOUCH</span>
           <div class="is-size-3">Schedule an Appointment</div>
           <div style="max-width: 500px; margin: auto;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. </p>
+            <p>Take the First Step Toward Pain-Free Movement. </p>
           </div>
         </div>
       </section>
@@ -852,8 +971,8 @@
               <div class="contact-card">
                 <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
                 <p class="card-title">Email</p>
-                <p>info@drsarahmitchell.com</p>
-                <p>appointments@drsarahmitchell.com</p>
+                <p>anjanasujarajan@gmail.com</p>
+                <p>mail@anjanasphysiocare.com</p>
               </div>
             </div>
 
@@ -862,7 +981,7 @@
               <div class="contact-card">
                 <div class="contact-icon-box"><i class="fas fa-map-marker-alt"></i></div>
                 <p class="card-title">Location</p>
-                <p>123 Medical Plaza, Suite 400<br>San Francisco, CA 94102</p>
+                <p>Raj Bhavan, Near Water Tank<br>Punalur, Kollam, Kerala, IN</p>
               </div>
             </div>
 
@@ -880,10 +999,12 @@
         </div>
       </section>
     </div>
+  </div>
+  
     <footer class="footer has-background-link-dark has-text-white">
       <div class="content has-text-centered">
         <p>
-          © 2025 Dr. Sarah Mitchell. All rights reserved. · Medical License #MD-12345
+          © 2025 Dr. Anjana S. Raj. All rights reserved.
         </p>
       </div>
     </footer>

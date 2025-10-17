@@ -1,134 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Auto-Sliding Reviews with Avatar</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
-<style>
-body { background:#f7f7f7; }
-.reviews-carousel-container { overflow:hidden; width:100%; }
-.reviews-carousel-track { display:flex; will-change: transform; }
-.review-card {
-  flex: 0 0 calc(25% - 1rem);
-  margin-right: 1rem;
-  background:#fff;
-  border-radius:8px;
-  padding:1rem;
-  box-shadow:0 2px 8px rgba(0,0,0,0.06);
-  box-sizing:border-box;
-}
-.review-header{display:flex;align-items:center;margin-bottom:.5rem;}
-.user-avatar{
-  width:40px;height:40px;border-radius:50%;margin-right:.75rem;flex:0 0 40px;object-fit:cover;
-}
-.user-name{font-weight:600}
-.review-date{font-size:.8rem;color:#666}
-.star-rating{color:#fbbc05;font-size:1.1rem;margin:.25rem 0}
-.review-text{font-size:.9rem;color:#333}
-@media (max-width:1024px){.review-card{flex:0 0 calc(50% - 1rem)}}
-@media (max-width:768px){.review-card{flex:0 0 100%; margin-right: 0}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Bulma</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+        .faq-section {
+            border-radius: 8px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #ededed;
+            padding: 0 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            color: #363636;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .faq-answer {
+            color: #7a7a7a;
+            font-size: 0.95rem;
+        }
+        .icon-wrapper {
+            background-color: #f0f0f0; /* Light grey background for icons */
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .icon-wrapper .icon {
+            color: #4a4a4a;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-
 <body>
-<section class="section">
-  <div class="container">
-    <h2 class="title is-4">Customer Reviews</h2>
-    <div class="reviews-carousel-container">
-      <div class="reviews-carousel-track" id="review-track"></div>
-    </div>
-  </div>
-</section>
 
-<script>
-/* ---------- Reviews array with avatar ---------- */
-const reviews = [
-  {
-    name:"Achu Aravind",
-    date:"Sep 4, 2024",
-    text:"Amazing service and top-notch creativity.",
-    avatar:"https://lh3.googleusercontent.com/a-/ALV-UjUX8snlP77rMsrtXMNIY60eobaB6mLU5IbOeB5_ta8wkfZeGVB9Bg=w72-h72-p-rp-mo-br100"
-  },
-  {
-    name:"Azhar Ismail",
-    date:"Aug 28, 2024",
-    text:"Very professional, quick delivery, highly recommend.",
-    avatar:"https://lh3.googleusercontent.com/a-/ALV-UjUX8snlP77rMsrtXMNIY60eobaB6mLU5IbOeB5_ta8wkfZeGVB9Bg=w72-h72-p-rp-mo-br100"
-  },
-  {
-    name:"Sijo Paul",
-    date:"Jun 7, 2024",
-    text:"Beautiful design and smooth communication!",
-    avatar:"https://lh3.googleusercontent.com/a-/ALV-UjUX8snlP77rMsrtXMNIY60eobaB6mLU5IbOeB5_ta8wkfZeGVB9Bg=w72-h72-p-rp-mo-br100"
-  },
-  {
-    name:"Riya Singh",
-    date:"May 15, 2024",
-    text:"They understood my brand perfectly!",
-    avatar:"https://lh3.googleusercontent.com/a-/ALV-UjUX8snlP77rMsrtXMNIY60eobaB6mLU5IbOeB5_ta8wkfZeGVB9Bg=w72-h72-p-rp-mo-br100"
-  },
-  {
-    name:"David Lee",
-    date:"Apr 2, 2024",
-    text:"Absolutely fantastic logo and branding experience.",
-    avatar:"https://lh3.googleusercontent.com/a-/ALV-UjUX8snlP77rMsrtXMNIY60eobaB6mLU5IbOeB5_ta8wkfZeGVB9Bg=w72-h72-p-rp-mo-br100"
-  }
-  // add more as needed
-];
+    <section class="section">
+        <div class="container">
+            <div class="faq-section">
+                <div class="columns is-multiline">
+                    <div class="column is-half">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                
+                                Is there a free trial available?
+                            </div>
+                            <p class="faq-answer">
+                                Yes, you can try us for free for 30 days. If you want, we'll provide you with a free 30-minute onboarding call to get you up and running.
+                            </p>
+                        </div>
+                    </div>
 
-/* ---------- Helpers ---------- */
-function createCardHTML(r){
-  return `
-    <div class="review-card">
-      <div class="review-header">
-        <img class="user-avatar" src="${r.avatar}" alt="${r.name} avatar"/>
-        <div>
-          <div class="user-name">${r.name}</div>
-          <div class="review-date">${r.date}</div>
+                    <div class="column is-half">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                
+                                How does billing work?
+                            </div>
+                            <p class="faq-answer">
+                                Plans are per workspace, not per account. You can upgrade one workspace, and still have any number of free workspaces.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="column is-half">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                
+                                Can I change my plan later?
+                            </div>
+                            <p class="faq-answer">
+                                Of course you can! Our pricing scales with your company. Chat to our friendly team to find a solution that works for you as you grow.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="column is-half">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                               
+                                How do I change my account email?
+                            </div>
+                            <p class="faq-answer">
+                                You can change the email address associated with your account by going to untitledui.com/account from a laptop or desktop.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="column is-half">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                
+                                What is your cancellation policy?
+                            </div>
+                            <p class="faq-answer">
+                                We understand that things change. You can cancel your plan at any time and we'll refund you the difference already paid.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="column is-half">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                               
+                                How does support work?
+                            </div>
+                            <p class="faq-answer">
+                                If you're having trouble with Untitled UI, we're here to try and help via <a href="mailto:hello@untitledui.com">hello@untitledui.com</a>. We're a small team, but will get back to soon.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="star-rating">★★★★★</div>
-      <p class="review-text">${r.text}</p>
-    </div>`;
-}
+    </section>
 
-/* ---------- Initialization and sliding ---------- */
-document.addEventListener('DOMContentLoaded', ()=> {
-  const track = document.getElementById('review-track');
-  track.innerHTML = reviews.map(r => createCardHTML(r)).join('');
-
-  const intervalMs = 5000;
-  const transitionMs = 600;
-  let sliding = false;
-
-  function slideOne(){
-    if(sliding) return;
-    const firstCard = track.querySelector('.review-card');
-    if(!firstCard) return;
-    const style = getComputedStyle(firstCard);
-    const marginRight = parseFloat(style.marginRight) || 0;
-    const cardWidth = firstCard.offsetWidth + marginRight;
-
-    sliding = true;
-    track.style.transition = `transform ${transitionMs}ms ease`;
-    track.style.transform = `translateX(-${cardWidth}px)`;
-
-    const cleanup = ()=>{
-      track.style.transition = 'none';
-      track.style.transform = 'none';
-      track.appendChild(track.firstElementChild);
-      track.offsetHeight;
-      sliding = false;
-    };
-    track.addEventListener('transitionend', function onEnd(){
-      cleanup();
-      track.removeEventListener('transitionend', onEnd);
-    });
-  }
-
-  setInterval(slideOne, intervalMs);
-});
-</script>
 </body>
 </html>
