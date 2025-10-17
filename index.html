@@ -399,11 +399,11 @@
 
       <div id="navbarBasicExample" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item" href="#">Home</a>
-          <a class="navbar-item" href="#">About</a>
-          <a class="navbar-item" href="#">Services</a>
-          <a class="navbar-item" href="#">FAQs</a>
-          <a class="navbar-item" href="#">Contact</a>
+          <a class="navbar-item" href="#home">Home</a>
+          <a class="navbar-item" href="#about">About</a>
+          <a class="navbar-item" href="#services">Services</a>
+          <a class="navbar-item" href="#faqs">FAQs</a>
+          <a class="navbar-item" href="#contact">Contact</a>
         </div>
       </div>
     </div>
@@ -1025,6 +1025,25 @@
             });
           });
         }
+      });
+    </script>
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const navbarHeight = document.querySelector('.navbar').offsetHeight; // Get actual navbar height
+            const offsetPosition = targetElement.offsetTop - navbarHeight; // Add an extra 10px for padding
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     </script>
 </body>
